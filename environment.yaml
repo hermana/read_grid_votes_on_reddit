@@ -1,0 +1,9 @@
+name: read_grid_votes_on_reddit
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - praw

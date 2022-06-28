@@ -24,10 +24,9 @@ reddit = praw.Reddit(client_id=personal_config.CLIENT_ID, client_secret=personal
 url = get_url()
 post_with_grid_votes = reddit.submission(url=url)
 comments = post_with_grid_votes.comments
-comments.replace_more(limit=0)
+comments.replace_more(limit=None)
 
 
-# FIXME: lambda?
 for comment in comments:
     processed_comment = preprocess(comment.body)
     comment_text = processed_comment.split()
@@ -39,4 +38,5 @@ for comment in comments:
             grid_votes.add_vote(word)
 
 
+grid_votes.print()
 grid_votes.write_results_to_file('results.csv')

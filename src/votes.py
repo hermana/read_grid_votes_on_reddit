@@ -14,5 +14,8 @@ class Votes:
         with file:     
             write = csv.writer(file) 
             write.writerows(self.votes) 
+    
+    def print(self):
+        print(self.votes)
 
     

@@ -37,5 +37,6 @@ for comment in comments:
         elif grid_vote_regex.backwards.match(word):
             word = flip(word)
             grid_votes.add_vote(word)
-            
-print(grid_votes.votes)
+
+
+grid_votes.write_results_to_file('results.csv')

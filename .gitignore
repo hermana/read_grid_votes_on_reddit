@@ -1,5 +1,6 @@
 # hermana custom ignored files
 personal_config.py
+*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

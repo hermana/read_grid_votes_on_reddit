@@ -10,10 +10,10 @@ class Votes:
             self.votes[vote] = 1
 
     def write_results_to_file(self, filename: str):
-        file = open(filename, 'w+', newline ='') 
-        with file:     
-            write = csv.writer(file) 
-            write.writerows(self.votes) 
+        with open(filename, 'w') as csv_file:  
+            writer = csv.writer(csv_file)
+            for key, value in self.votes.items():
+                writer.writerow([key, value]) 
     
     def print(self):
         print(self.votes)

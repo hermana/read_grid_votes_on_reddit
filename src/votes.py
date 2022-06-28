@@ -10,9 +10,9 @@ class Votes:
             self.votes[vote] = 1
 
     def write_results_to_file(self, filename: str):
-        # put them in descending order
-        with open(filename, 'w', encoding='UTF8', newline='') as f:
-            writer = csv.DictWriter(f, fieldnames= ['Submission', 'Number of Votes'])
-            writer.writeheader()
-            writer.writerows(self.votes)
+        file = open(filename, 'w+', newline ='') 
+        with file:     
+            write = csv.writer(file) 
+            write.writerows(self.votes) 
+
     

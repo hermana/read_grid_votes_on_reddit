@@ -24,7 +24,7 @@ reddit = praw.Reddit(client_id=personal_config.CLIENT_ID, client_secret=personal
 url = get_url()
 post_with_grid_votes = reddit.submission(url=url)
 comments = post_with_grid_votes.comments
-comments.replace_more(limit=None)
+comments.replace_more(limit=0)
 
 
 # FIXME: lambda?

@@ -17,6 +17,8 @@ Alternatively, if you can `pip-install praw` you will probably be able to run ev
 
 # Running the script
 
+First you will need to set up a `personal_config.py` in the `src` directory. This file will contain your credentials to scrape the reddit post. You will need a client ID (CLIENT_ID), client secret (CLIENT_SECRET), and user agent (AGENT). Follow the instructions [here](https://www.geeksforgeeks.org/how-to-get-client_id-and-client_secret-for-python-reddit-api-registration/) to get them. 
+
 In the `src` directory, run
 
 ```python main.py```
